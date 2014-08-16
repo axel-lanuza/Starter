@@ -1,0 +1,67 @@
+p {
+	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+}
+b, strong {
+	font-weight: bold;
+}
+em, i {
+	font-style: italic;
+}
+a {
+	color: $colorMain;
+	text-decoration: none;
+	background: transparent;
+	cursor: pointer;
+	&:hover, &:focus, &:active {
+		outline: 0;
+		text-decoration: underline;
+	}
+}
+small {
+	// font-size: 75%;
+	// vertical-align: baseline;
+	
+	// It doesnt work. Font size affects line height
+}
+h1 {
+	font-size: $baseFontSize*2;
+	line-height: $baseLineHeight*2;
+	font-weight: bold;
+}
+h2 {
+	font-size: $baseFontSize*1.5;
+	line-height: $baseLineHeight;
+	font-weight: bold;
+}
+h3 {
+	font-size: $baseFontSize*1.125;
+	line-height: $baseLineHeight;
+	font-weight: bold;
+}
+h4 {
+	font-size: $baseFontSize*1;
+	line-height: $baseLineHeight;
+	font-weight: bold;
+}
+h5 {
+	font-size: $baseFontSize*1;
+	line-height: $baseLineHeight;
+	font-weight: normal;
+}
+h6 {
+	font-size: $baseFontSize*0.75;
+	line-height: $baseLineHeight;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+	margin-bottom: $baseLineHeight;
+}
+ul, ol {
+	margin: $baseLineHeight;
+	ul, ol {
+		margin: 0 $baseLineHeight;
+	}
+	li {
+		font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+	}
+}

@@ -1,0 +1,18 @@
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@mixin animate($effect: fadeIn, $duration: 800ms, $delay: 0ms) {
+    animation-fill-mode: both;
+	animation-name: $effect;
+	animation-duration: $duration;
+	animation-delay: $delay;
+}
+
+// todo: add more animations effects
+// @include animate(fadeIn, 800ms, 1200ms);

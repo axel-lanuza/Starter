@@ -1,0 +1,37 @@
+::selection { 
+	background: $colorMain; 
+	color: white;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	height: 100%;
+	font-size: $baseFontSize;
+	line-height: $baseLineHeight;
+	font-family: $baseFontFamily;
+	color: $colorText;
+	background: $colorBackground;
+	@if $verticalRythm == 1 {
+		background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
+		background-size: 100% $baseLineHeight;
+	}
+}
+img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
