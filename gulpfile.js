@@ -11,7 +11,7 @@ gulp.task('sass', function () {
 	gulp.src('./sass/style.scss')
 		.pipe(plumber())
 		.pipe(sass())
-		.pipe(autoprefixer('safari >= 6', 'chrome >= 31', 'ie >= 8', 'ff >= 24', 'ios >= 4', 'android >= 4'))
+		.pipe(autoprefixer())
 		.pipe(minifycss())
 		.pipe(gulp.dest('./css'));
 });
