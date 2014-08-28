@@ -1,4 +1,4 @@
-@mixin mediaqueries($mediaqueries) {
+@mixin mq($mediaqueries) {
     @if $mediaqueries == medium {
         @media only screen and (min-width: $gridTabletStart) { 
             @content;
@@ -17,7 +17,7 @@
 }
 // body {
 //   font-size: 16px;
-//   @include breakpoint(medium) {
+//   @include mq(medium) {
 //     font-size: 18px;
 //   }
 // }

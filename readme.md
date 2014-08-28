@@ -9,5 +9,3 @@ Starter boilerplate made by Pawel Grzybek (www.studiorgb.uk). Build with SASS an
 - add gulp-svgo to it
 - add hr to typography.scss
 - add gulp-imagemin
-- change mixin brakepoints to media (medium large retina)
-- use scale factore mixin to generate apropriate font-sizes to keep baseline grid
