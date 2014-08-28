@@ -22,7 +22,7 @@ body {
 	font-family: $baseFontFamily;
 	color: $colorText;
 	background: $colorBackground;
-	@if $verticalRythm == 1 {
+	@if $verticalRythm == true {
 		background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
 		background-size: 100% $baseLineHeight;
 	}

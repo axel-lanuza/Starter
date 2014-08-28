@@ -24,17 +24,17 @@ small {
 	// It doesnt work. Font size affects line height
 }
 h1 {
-	font-size: $baseFontSize*2;
+	font-size: $baseFontSize*$baseScaleFactor*$baseScaleFactor*$baseScaleFactor;
 	line-height: $baseLineHeight*2;
 	font-weight: bold;
 }
 h2 {
-	font-size: $baseFontSize*1.5;
+	font-size: $baseFontSize*$baseScaleFactor*$baseScaleFactor;
 	line-height: $baseLineHeight;
 	font-weight: bold;
 }
 h3 {
-	font-size: $baseFontSize*1.125;
+	font-size: $baseFontSize*$baseScaleFactor;
 	line-height: $baseLineHeight;
 	font-weight: bold;
 }
@@ -49,7 +49,7 @@ h5 {
 	font-weight: normal;
 }
 h6 {
-	font-size: $baseFontSize*0.75;
+	font-size: $baseFontSize/$baseScaleFactor;
 	line-height: $baseLineHeight;
 	font-weight: normal;
 }
