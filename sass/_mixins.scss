@@ -1,16 +1,21 @@
-@mixin mq($mediaqueries) {
-    @if $mediaqueries == medium {
+@mixin mq($value) {
+    @if $value == medium {
         @media only screen and (min-width: $gridTabletStart) { 
             @content;
         }
     }
-    @else if $mediaqueries == large {
+    @else if $value == large {
         @media only screen and (min-width: $gridDesktopStart) { 
             @content;
         }
     }
-    @else if $mediaqueries == retina {
+    @else if $value == retina {
         @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) { 
+            @content;
+        }
+    }
+    @else {
+        @media only screen and (min-width: $value) { 
             @content;
         }
     }
