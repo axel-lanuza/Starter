@@ -1,5 +1,5 @@
-::selection { 
-	background: $colorMain; 
+::selection {
+	background: $colorMain;
 	color: white;
 }
 *, *:before, *:after {
@@ -28,7 +28,7 @@ body {
 	}
 }
 img {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   max-width: 100%;
   height: auto;
