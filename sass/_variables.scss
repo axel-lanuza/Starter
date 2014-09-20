@@ -1,20 +1,22 @@
 // Base
-$baseFontSize: 16px;
-$baseLineHeight: 26px;
+$baseFontSize: 14px;
+$baseLineHeight: 24px;
 $baseFontFamily: sans-serif;
-$baseScaleFactor: 1.333;
+$baseScaleFactor: 1.5;
 
 // 1.618 - Golden section
 // 1.5 - Perfect fifth
 // 1.333 - Perfect fourth
 
 // Show vertical rythm
-$verticalRythm: true;
+$verticalRythm: false;
 
 // Grid
 $gridColumns: 12;
-$gridMaxWidth: 1200px;
-$gridGutter: $baseLineHeight;
+$gridColumnWidth: 60px;
+$gridGutter: 20px;
+$gridMaxWidth: auto;
+
 
 // Breakpoints
 $gridTabletStart: 480px;
