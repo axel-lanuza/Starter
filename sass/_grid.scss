@@ -1,7 +1,23 @@
-// use this mixin to make your div a wrapper to your columns
+// Count max width of row - px output
+@function gridMaxWidth() {
+  @if $gridMaxWidth == auto {
+    @return ($gridColumns * $gridColumnWidth) + ($gridColumns * $gridGutter);
+  }
+  @else {
+    @return $gridMaxWidth;
+  }
+}
+
+// Count col width - % output
+@function columnWidth($columns) {
+  @return $columns * (($gridColumnWidth + $gridGutter) / (($gridColumns * $gridColumnWidth) + ($gridColumns * $gridGutter)) * 100%);
+}
+
+
+// Use this mixin to st row up
 @mixin row($option: none) {
-  width: 100%;
   @if $option == full {
+    width: 100%;
     *zoom: 1;
   }
   @else if $option == inside {
@@ -11,8 +27,10 @@
     *zoom: 1;
   }
   @else {
+    width: 100%;
     max-width: gridMaxWidth();
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     *zoom: 1;
   }
   &:before, &:after {
@@ -24,18 +42,20 @@
   }
 }
 
-// use this mixin to use it as a column, pass a number of columns as an argument
+// Use this mixin to set col up - pass ammount of columns as argument
 @mixin col($columns: $gridColumns) {
   width: columnWidth($columns);
   float: left;
   padding: 0 $gridGutter/2;
 }
 
-// push and pull, pass and amount of columns as an argument
+// Push columns - pass amount of columns as an argument
 @mixin push($columns: 0) {
   position: relative;
   left: columnWidth($columns);
 }
+
+// Pull columns - pass amount of columns as an argument
 @mixin pull($columns: 0) {
   position: relative;
   right: columnWidth($columns);
