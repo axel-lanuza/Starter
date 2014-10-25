@@ -1,5 +1,5 @@
 ::selection {
-	background: $colorMain;
+	background: $color1;
 	color: white;
 }
 *, *:before, *:after {
@@ -17,14 +17,14 @@ html {
 }
 body {
 	height: 100%;
-	font-size: $baseFontSize;
-	line-height: $baseLineHeight;
-	font-family: $baseFontFamily;
+	font-size: $fz;
+	line-height: $lh;
+	font-family: $ff;
 	color: $colorText;
-	background: $colorBackground;
+	background: $colorBg;
 	@if $verticalRythm == true {
 		background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
-		background-size: 100% $baseLineHeight;
+		background-size: 100% $lh;
 	}
 }
 img {

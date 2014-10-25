@@ -8,7 +8,7 @@ em, i {
 	font-style: italic;
 }
 a {
-	color: $colorMain;
+	color: $color1;
 	text-decoration: none;
 	background: transparent;
 	cursor: pointer;
@@ -20,46 +20,46 @@ a {
 small {
 	// font-size: 75%;
 	// vertical-align: baseline;
-	
+
 	// It doesnt work. Font size affects line height
 }
 h1 {
-	font-size: $baseFontSize*$baseScaleFactor*$baseScaleFactor*$baseScaleFactor;
-	line-height: $baseLineHeight*2;
+	font-size: $fz*$baseScaleFactor*$baseScaleFactor*$baseScaleFactor;
+	line-height: $lh*2;
 	font-weight: bold;
 }
 h2 {
-	font-size: $baseFontSize*$baseScaleFactor*$baseScaleFactor;
-	line-height: $baseLineHeight;
+	font-size: $fz*$baseScaleFactor*$baseScaleFactor;
+	line-height: $lh;
 	font-weight: bold;
 }
 h3 {
-	font-size: $baseFontSize*$baseScaleFactor;
-	line-height: $baseLineHeight;
+	font-size: $fz*$baseScaleFactor;
+	line-height: $lh;
 	font-weight: bold;
 }
 h4 {
-	font-size: $baseFontSize*1;
-	line-height: $baseLineHeight;
+	font-size: $fz*1;
+	line-height: $lh;
 	font-weight: bold;
 }
 h5 {
-	font-size: $baseFontSize*1;
-	line-height: $baseLineHeight;
+	font-size: $fz*1;
+	line-height: $lh;
 	font-weight: normal;
 }
 h6 {
-	font-size: $baseFontSize/$baseScaleFactor;
-	line-height: $baseLineHeight;
+	font-size: $fz/$baseScaleFactor;
+	line-height: $lh;
 	font-weight: normal;
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin-bottom: $baseLineHeight;
+	margin-bottom: $lh;
 }
 ul, ol {
-	margin: $baseLineHeight;
+	margin: $lh;
 	ul, ol {
-		margin: 0 $baseLineHeight;
+		margin: 0 $lh;
 	}
 	li {
 		font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;

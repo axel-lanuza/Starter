@@ -1,7 +1,7 @@
-// Base
-$baseFontSize: 14px;
-$baseLineHeight: 24px;
-$baseFontFamily: sans-serif;
+// Base font settings
+$fz: 14px;
+$lh: 24px;
+$ff: sans-serif;
 $baseScaleFactor: 1.5;
 
 // 1.618 - Golden section
@@ -24,5 +24,5 @@ $gridDesktopStart: 880px;
 
 // Colors
 $colorText: #555;
-$colorBackground: #fff;
-$colorMain: #f06;
+$colorBg: #fff;
+$color1: #f06;
