@@ -3,10 +3,3 @@ Starter boilerplate made by Pawel Grzybek (www.studiorgb.uk). Build with SASS an
 
 ## To do
 Process of building perfect boilerplaite that suits your requirements is endless. Here are the things what im planing to implement shortly:
-
-- add forms to global.scss
-- add more typography examples to global.scss
-- global which works fine with gulp would be awesome
-- add gulp-svgo to it
-- add hr to typography.scss
-- add gulp-imagemin
