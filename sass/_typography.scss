@@ -18,32 +18,32 @@ a {
 	}
 }
 h1 {
-	font-size: $fz*$baseScaleFactor*$baseScaleFactor*$baseScaleFactor;
+	font-size: $fz*2;
 	line-height: $lh*2;
 	font-weight: bold;
 }
 h2 {
-	font-size: $fz*$baseScaleFactor*$baseScaleFactor;
+	font-size: $fz*1.5;
 	line-height: $lh;
 	font-weight: bold;
 }
 h3 {
-	font-size: $fz*$baseScaleFactor;
+	font-size: $fz*1.25;
 	line-height: $lh;
 	font-weight: bold;
 }
 h4 {
-	font-size: $fz*1;
+	font-size: $fz;
 	line-height: $lh;
 	font-weight: bold;
 }
 h5 {
-	font-size: $fz*1;
+	font-size: $fz;
 	line-height: $lh;
 	font-weight: normal;
 }
 h6 {
-	font-size: $fz/$baseScaleFactor;
+	font-size: $fz*0.75;
 	line-height: $lh;
 	font-weight: normal;
 }
