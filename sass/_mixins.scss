@@ -1,36 +1,39 @@
 @mixin mq($value) {
-    @if $value == medium {
-        @media only screen and (min-width: $gridTabletStart) { 
-            @content;
-        }
+  @if $value == medium {
+    @media only screen and (min-width: $gridTabletStart) {
+      @content;
     }
-    @else if $value == large {
-        @media only screen and (min-width: $gridDesktopStart) { 
-            @content;
-        }
+  }
+  @else if $value == large {
+    @media only screen and (min-width: $gridDesktopStart) {
+      @content;
     }
-    @else if $value == retina {
-        @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) { 
-            @content;
-        }
+  }
+  @else if $value == retina {
+    @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6/2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+      @content;
     }
-    @else {
-        @media only screen and (min-width: $value) { 
-            @content;
-        }
+  }
+  @else {
+    @media only screen and (min-width: $value) {
+      @content;
     }
+  }
 }
-// body {
-//   font-size: 16px;
-//   @include mq(medium) {
-//     font-size: 18px;
-//   }
-// }
 
 
 @mixin transition($property: all) {
     transition: $property 150ms ease-out;
 }
-// body {
-//   @include transition(opacity);
-// }
+
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
