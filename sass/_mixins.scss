@@ -1,11 +1,11 @@
 @mixin mq($value) {
   @if $value == medium {
-    @media only screen and (min-width: $gridTabletStart) {
+    @media only screen and (min-width: $bpTablet) {
       @content;
     }
   }
   @else if $value == large {
-    @media only screen and (min-width: $gridDesktopStart) {
+    @media only screen and (min-width: $bpDestop) {
       @content;
     }
   }
