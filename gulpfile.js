@@ -1,18 +1,19 @@
 var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
-	plumber = require('gulp-plumber'),
 	uglify = require('gulp-uglify'),
 	rename = require("gulp-rename");
 
 
 gulp.task('sass', function () {
 	gulp.src('./sass/style.scss')
-		.pipe(plumber())
 		.pipe(sass({
       style: 'compressed',
       precision: 4
     }))
+    .on('error', function (err) {
+      console.log(err.message);
+    })
 		.pipe(autoprefixer())
 		.pipe(gulp.dest('./css'));
 });
