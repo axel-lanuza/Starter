@@ -18,6 +18,7 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('./css'));
 });
 
+
 gulp.task('uglify', function () {
 	gulp.src('./js/scripts.js')
 		.pipe(uglify())
@@ -33,3 +34,9 @@ gulp.task('watch', function() {
 
 
 gulp.task('default', ['watch']);
+
+
+gulp.task('pagespeed', pagespeed.bind(null, {
+  url: 'http://studiorgb.uk',
+  strategy: 'mobile'
+}));
