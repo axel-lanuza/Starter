@@ -1,31 +1,31 @@
 ::selection {
-	background: $color1;
-	color: white;
+  background: $color1;
+  color: white;
 }
 *, *:before, *:after {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 html {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	-moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
-	height: 100%;
-	font-size: $fz;
-	line-height: $lh;
-	font-family: $ff;
-	color: $colorText;
-	background: $colorBg;
-	@if $verticalRythm == true {
-		background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
-		background-size: 100% $lh;
-	}
+  height: 100%;
+  font-size: $fz;
+  line-height: $lh;
+  font-family: $ff;
+  color: $colorText;
+  background: $colorBg;
+  @if $verticalRythm == true {
+    background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
+    background-size: 100% $lh;
+  }
 }
 img {
   display: block;

@@ -1,61 +1,61 @@
 p {
-	font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
 }
 b, strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 em, i {
-	font-style: italic;
+  font-style: italic;
 }
 a {
-	color: $color1;
-	text-decoration: none;
-	background: transparent;
-	cursor: pointer;
-	&:hover, &:focus, &:active {
-		outline: 0;
-		text-decoration: underline;
-	}
+  color: $color1;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  &:hover, &:focus, &:active {
+    outline: 0;
+    text-decoration: underline;
+  }
 }
 h1 {
-	font-size: $fz*2;
-	line-height: $lh*2;
-	font-weight: bold;
+  font-size: $fz*2;
+  line-height: $lh*2;
+  font-weight: bold;
 }
 h2 {
-	font-size: $fz*1.5;
-	line-height: $lh;
-	font-weight: bold;
+  font-size: $fz*1.5;
+  line-height: $lh;
+  font-weight: bold;
 }
 h3 {
-	font-size: $fz*1.25;
-	line-height: $lh;
-	font-weight: bold;
+  font-size: $fz*1.25;
+  line-height: $lh;
+  font-weight: bold;
 }
 h4 {
-	font-size: $fz;
-	line-height: $lh;
-	font-weight: bold;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: bold;
 }
 h5 {
-	font-size: $fz;
-	line-height: $lh;
-	font-weight: normal;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: normal;
 }
 h6 {
-	font-size: $fz*0.75;
-	line-height: $lh;
-	font-weight: normal;
+  font-size: $fz*0.75;
+  line-height: $lh;
+  font-weight: normal;
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol {
-	margin-bottom: $lh;
+  margin-bottom: $lh;
 }
 ul, ol {
-	margin: $lh;
-	ul, ol {
-		margin: 0 $lh;
-	}
-	li {
-		font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-	}
+  margin: $lh;
+  ul, ol {
+    margin: 0 $lh;
+  }
+  li {
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+  }
 }
