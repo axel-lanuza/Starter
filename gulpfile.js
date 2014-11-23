@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-ruby-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	uglify = require('gulp-uglify'),
-	rename = require("gulp-rename");
+	rename = require("gulp-rename"),
+  pagespeed = require('psi');
 
 
 gulp.task('sass', function () {
