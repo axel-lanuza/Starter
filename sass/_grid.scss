@@ -1,7 +1,7 @@
 // Count max width of row - px output
 @function gridMaxWidth() {
   @if $gridMaxWidth == auto {
-    @return ($gridColumns * $gridColumnWidth) + ($gridColumns * $gridGutter);
+    @return $gridColumns * ($gridColumnWidth + $gridGutter);
   }
   @else {
     @return $gridMaxWidth;
@@ -10,11 +10,11 @@
 
 // Count col width - % output
 @function columnWidth($columns) {
-  @return $columns * (($gridColumnWidth + $gridGutter) / (($gridColumns * $gridColumnWidth) + ($gridColumns * $gridGutter)) * 100%);
+  @return $columns * (($gridColumnWidth + $gridGutter) / ($gridColumns * ($gridColumnWidth + $gridGutter)) * 100%);
 }
 
 
-// Use this mixin to st row up
+// Use this mixin to create row
 @mixin row($option: none) {
   @if $option == full {
     width: 100%;
@@ -34,7 +34,7 @@
     *zoom: 1;
   }
   &:before, &:after {
-    content: " ";
+    content: '';
     display: table;
   }
   &:after {
@@ -42,7 +42,7 @@
   }
 }
 
-// Use this mixin to set col up - pass ammount of columns as argument
+// Use this mixin to create column - pass ammount of columns as argument
 @mixin col($columns: $gridColumns) {
   width: columnWidth($columns);
   float: left;
