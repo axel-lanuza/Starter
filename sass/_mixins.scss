@@ -21,10 +21,21 @@
   }
 }
 
+// how to use:
+// body {
+//   font-size: 16px;
+//   @include mq(large) {
+//     font-size: 18px;
+//   }
+// }
+
 
 @mixin transition($property: all) {
     transition: $property 150ms ease-out;
 }
+
+// how to use:
+// @include transition(opacity);
 
 
 @mixin clearfix() {
@@ -37,3 +48,6 @@
     clear: both;
   }
 }
+
+// how to use:
+// @include clearfix;
