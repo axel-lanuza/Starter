@@ -19,9 +19,9 @@ gulp.task('sass', function () {
 });
 
 gulp.task('uglify', function () {
-	gulp.src('./js/script.js')
+	gulp.src('./js/scripts.js')
 		.pipe(uglify())
-		.pipe(rename('script.min.js'))
+		.pipe(rename('scripts.min.js'))
 		.pipe(gulp.dest('./js'));
 });
 
