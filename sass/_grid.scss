@@ -60,3 +60,20 @@
   position: relative;
   right: columnWidth($columns);
 }
+
+// Show grid background
+// Works only on viewport bigger that max width and when its auto
+@mixin grid() {
+  @if $gridMaxWidth == auto {
+    @include mq(gridMaxWidth()) {
+      background: linear-gradient(to right,
+        rgba(0,0,0,.05) 0px,
+        rgba(0,0,0,.05) $gridGutter/2,
+        rgba(0,0,0,.1) $gridGutter/2,
+        rgba(0,0,0,.1) $gridGutter/2 + $gridColumnWidth,
+        rgba(0,0,0,.05) $gridGutter/2 + $gridColumnWidth,
+        rgba(0,0,0,.05) $gridGutter/2 + $gridColumnWidth + $gridGutter/2);
+      background-size: ($gridGutter/2 + $gridColumnWidth + $gridGutter/2) $lh;
+    }
+  }
+}
