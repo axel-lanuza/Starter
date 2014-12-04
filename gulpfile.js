@@ -2,9 +2,7 @@ var gulp = require('gulp'),
   sass = require('gulp-ruby-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   uglify = require('gulp-uglify'),
-  rename = require("gulp-rename"),
-  imagemin = require('gulp-imagemin'),
-  pagespeed = require('psi');
+  rename = require("gulp-rename");
 
 
 // Compile sass, minify css, autoprefix
@@ -40,21 +38,3 @@ gulp.task('watch', function() {
 
 // default task
 gulp.task('default', ['watch']);
-
-
-// optimize images
-gulp.task('imagemin', function () {
-  return gulp.src('./img/source/*')
-    .pipe(imagemin({
-        progressive: false,
-        svgoPlugins: [{removeViewBox: false}]
-    }))
-    .pipe(gulp.dest('./img'));
-});
-
-
-// show speed test rank
-gulp.task('pagespeed', pagespeed.bind(null, {
-  url: 'http://studiorgb.uk',
-  strategy: 'mobile'
-}));
