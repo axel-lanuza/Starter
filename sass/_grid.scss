@@ -15,6 +15,8 @@
 
 
 // Use this mixin to create row
+// Pass full to create full width row
+// Pass inside to make grid inside the grid
 @mixin row($option: none) {
   @if $option == full {
     width: 100%;
@@ -42,11 +44,15 @@
   }
 }
 
-// Use this mixin to create column - pass ammount of columns as argument
-@mixin col($columns: $gridColumns) {
+// Use this mixin to create column
+// Pass ammount of columns as argument
+// Pass false if you dont need gutter
+@mixin col($columns: $gridColumns, $gutter: true) {
   width: columnWidth($columns);
   float: left;
-  padding: 0 $gridGutter/2;
+  @if $gutter == true {
+    padding: 0 $gridGutter/2;
+  }
 }
 
 // Push columns - pass amount of columns as an argument
