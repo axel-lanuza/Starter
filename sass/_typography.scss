@@ -1,6 +1,3 @@
-p {
-  font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
-}
 b, strong {
   font-weight: bold;
 }
@@ -54,8 +51,5 @@ ul, ol {
   margin: $lh;
   ul, ol {
     margin: 0 $lh;
-  }
-  li {
-    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
   }
 }
