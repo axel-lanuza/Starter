@@ -10,7 +10,7 @@ gulp.task('sass', function () {
   gulp.src('./sass/style.scss')
     .pipe(sass({
       style: 'compressed',
-      precision: 4
+      precision: 8
     }))
     .on('error', function (err) {
       console.log(err.message);
