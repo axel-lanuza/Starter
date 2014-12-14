@@ -1,3 +1,12 @@
+@mixin fz($size: $fz) {
+  font-size: $size;
+  font-size: $size / $fz * 1rem;
+  line-height: ceil($size / $lh) * ($lh / $size);
+}
+
+// how to use:
+// @include fz(20px);
+
 @mixin mq($value) {
   @if $value == medium {
     @media only screen and (min-width: $bpTablet) {
