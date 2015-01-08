@@ -51,7 +51,8 @@
   width: columnWidth($columns);
   float: left;
   @if $gutter == true {
-    padding: 0 $gridGutter/2;
+    padding-left: $gridGutter/2;
+    padding-right: $gridGutter/2;
   }
 }
 
