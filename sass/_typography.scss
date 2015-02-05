@@ -1,5 +1,12 @@
+%mb {
+  margin-bottom: $lh;
+  margin-bottom: $lh / $fz * 1rem;
+}
+%bold {
+  margin-bottom: $lh;
+}
 b, strong {
-  font-weight: bold;
+  @extend %bold;
 }
 em, i {
   font-style: italic;
@@ -14,37 +21,41 @@ a {
     text-decoration: underline;
   }
 }
-h1 {
+p {
+  @extend %mb;
+}
+h1, .h1 {
   @include fz($h1);
-  font-weight: bold;
+  @extend %bold;
+  @extend %mb;
 }
-h2 {
+h2, .h2 {
   @include fz($h2);
-  font-weight: bold;
+  @extend %bold;
+  @extend %mb;
 }
-h3 {
+h3, .h3 {
   @include fz($h3);
-  font-weight: bold;
+  @extend %bold;
+  @extend %mb;
 }
-h4 {
+h4, .h4 {
   @include fz($h4);
-  font-weight: bold;
+  @extend %bold;
+  @extend %mb;
 }
-h5 {
+h5, .h5 {
   @include fz($h5);
   font-weight: normal;
+  @extend %mb;
 }
-h6 {
+h6, .h6 {
   @include fz($h6);
   font-weight: normal;
-}
-h1, h2, h3, h4, h5, h6, p, ul, ol {
-  margin-bottom: $lh;
-  margin-bottom: $lh / $fz * 1rem;
+  @extend %mb;
 }
 ul, ol {
-  margin: $lh;
-  margin: $lh / $fz * 1rem;
+  @extend %mb;
   ul, ol {
     margin: 0 $lh;
     margin: 0 ($lh / $fz * 1rem);
