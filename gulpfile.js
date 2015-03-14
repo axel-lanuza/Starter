@@ -24,6 +24,9 @@ gulp.task('sass', function () {
 gulp.task('uglify', function () {
   gulp.src('./js/scripts.js')
     .pipe(uglify())
+    .on('error', function (err) {
+      console.log(err.message);
+    })
     .pipe(rename('scripts.min.js'))
     .pipe(gulp.dest('./js'));
 });
