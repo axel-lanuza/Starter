@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  sass = require('gulp-ruby-sass'),
+  sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   uglify = require('gulp-uglify'),
   rename = require("gulp-rename");
@@ -9,8 +9,7 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
   gulp.src('./sass/style.scss')
     .pipe(sass({
-      style: 'compressed',
-      precision: 8
+      outputStyle: 'compressed',
     }))
     .on('error', function (err) {
       console.log(err.message);
