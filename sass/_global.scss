@@ -37,3 +37,7 @@ img {
   border: 0;
   -ms-interpolation-mode: bicubic;
 }
+img[src$=".svg"] {
+  max-width: auto;
+  width: 100%;
+}
