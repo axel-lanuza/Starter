@@ -1,9 +1,8 @@
 %mb {
-  margin-bottom: $lh;
-  margin-bottom: $lh / $fz * 1rem;
+  margin-bottom: pxtorem($lh);
 }
 %bold {
-  margin-bottom: $lh;
+  font-weight: 700;
 }
 b, strong {
   @extend %bold;
@@ -25,39 +24,38 @@ p {
   @extend %mb;
 }
 h1, .h1 {
-  @include fz($h1);
+  font-size: pxtorem($h1);
   @extend %bold;
   @extend %mb;
 }
 h2, .h2 {
-  @include fz($h2);
+  font-size: pxtorem($h2);
   @extend %bold;
   @extend %mb;
 }
 h3, .h3 {
-  @include fz($h3);
+  font-size: pxtorem($h3);
   @extend %bold;
   @extend %mb;
 }
 h4, .h4 {
-  @include fz($h4);
+  font-size: pxtorem($h4);
   @extend %bold;
   @extend %mb;
 }
 h5, .h5 {
-  @include fz($h5);
+  font-size: pxtorem($h5);
   font-weight: normal;
   @extend %mb;
 }
 h6, .h6 {
-  @include fz($h6);
+  font-size: pxtorem($h6);
   font-weight: normal;
   @extend %mb;
 }
 ul, ol {
   @extend %mb;
   ul, ol {
-    margin: 0 $lh;
-    margin: 0 ($lh / $fz * 1rem);
+    margin: 0 pxtorem($lh);;
   }
 }

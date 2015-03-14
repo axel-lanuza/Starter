@@ -10,8 +10,7 @@
 }
 html {
   height: 100%;
-  font-size: ($fz / 16px) * 100%;
-  line-height: $lh / $fz;
+  font-size: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +21,8 @@ html {
 body {
   height: 100%;
   font-family: $ff;
+  font-size: pxtorem($fz);
+  line-height: pxtorem($lh);
   color: $colorText;
   background: $colorBg;
   @if $verticalRythm == true {
