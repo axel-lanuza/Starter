@@ -11,6 +11,10 @@
     "mobile-first",
     "responsive"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/studiorgb/Starter"
+  },
   "homepage": "http://studiorgb.uk",
   "devDependencies": {
     "gulp": "~3.8.11",
