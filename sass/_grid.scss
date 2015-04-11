@@ -1,39 +1,13 @@
-// Count max width of row - px output
-@function gridMaxWidth() {
-  @if $gridMaxWidth == auto {
-    @return $gridColumns * ($gridColumnWidth + $gridGutter);
-  }
-  @else {
-    @return $gridMaxWidth;
-  }
-}
-
-// Count col width - % output
-@function columnWidth($columns) {
-  @return $columns * (($gridColumnWidth + $gridGutter) / ($gridColumns * ($gridColumnWidth + $gridGutter)) * 100%);
-}
-
-
-// Use this mixin to create row
-// Pass full to create full width row
-// Pass inside to make grid inside the grid
-@mixin row($option: none) {
-  @if $option == full {
-    width: 100%;
-    *zoom: 1;
-  }
-  @else if $option == inside {
-    max-width: gridMaxWidth();
-    margin-left: -$gridGutter/2;
-    margin-right: -$gridGutter/2;
-    *zoom: 1;
+@mixin row($inside: false) {
+  @if($inside == true) {
+    margin-left: -$gutter/2;
+    margin-right: -$gutter/2;
   }
   @else {
     width: 100%;
-    max-width: gridMaxWidth();
+    max-width: $wrapper;
     margin-left: auto;
     margin-right: auto;
-    *zoom: 1;
   }
   &:before, &:after {
     content: '';
@@ -44,43 +18,19 @@
   }
 }
 
-// Use this mixin to create column
-// Pass ammount of columns as argument
-// Pass false if you dont need gutter
-@mixin col($columns: $gridColumns, $gutter: true) {
-  width: columnWidth($columns);
+@mixin col($width: 1) {
   float: left;
-  @if $gutter == true {
-    padding-left: $gridGutter/2;
-    padding-right: $gridGutter/2;
-  }
+  width: percentage($width);
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
 }
 
-// Push columns - pass amount of columns as an argument
-@mixin push($columns: 0) {
+@mixin push($width: 0) {
   position: relative;
-  left: columnWidth($columns);
+  left: percentage($width);
 }
 
-// Pull columns - pass amount of columns as an argument
-@mixin pull($columns: 0) {
+@mixin pull($width: 0) {
   position: relative;
-  right: columnWidth($columns);
-}
-
-// Show grid background
-// Works only on viewport bigger that max width and when its auto
-@mixin grid() {
-  @if $gridMaxWidth == auto {
-    @include mq(gridMaxWidth()) {
-      background: linear-gradient(to right,
-        rgba(0,0,0,.05) 0px,
-        rgba(0,0,0,.05) $gridGutter/2,
-        rgba(0,0,0,.1) $gridGutter/2,
-        rgba(0,0,0,.1) $gridGutter/2 + $gridColumnWidth,
-        rgba(0,0,0,.05) $gridGutter/2 + $gridColumnWidth,
-        rgba(0,0,0,.05) $gridGutter/2 + $gridColumnWidth + $gridGutter/2);
-      background-size: ($gridGutter/2 + $gridColumnWidth + $gridGutter/2) $lh;
-    }
-  }
+  right: percentage($width);
 }
