@@ -6,11 +6,15 @@ Starter project build with SASS and Gulp. Includes custom grid system, basic typ
 
 Just install via npm install command. Node.js and gulp preinstalled on your system is needed.
 
-  npm install
+{% highlight  %}
+npm install
+{% endhighlight %}
 
 And then run a gulp.
 
-  gulp
+{% highlight  %}
+gulp
+{% endhighlight %}
 
 ## To do:
 - Shitload
