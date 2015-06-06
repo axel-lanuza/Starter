@@ -1,9 +1,8 @@
 @mixin row($inside: false) {
-  @if($inside == true) {
+  @if $inside {
     margin-left: -$gutter/2;
     margin-right: -$gutter/2;
-  }
-  @else {
+  } @else {
     width: 100%;
     max-width: $wrapper;
     margin-left: auto;
