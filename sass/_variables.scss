@@ -18,8 +18,12 @@ $wrapper: 600px;
 $gutter: $lh;
 
 // Breakpoints
-$bpTablet: 480px;
-$bpDestop: 880px;
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'max': (min-width: 1200px),
+  'retina': ((min-resolution: 1.3dppx))
+);
 
 // Colors
 $colorText: #555;
