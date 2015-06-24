@@ -2,7 +2,8 @@ var gulp = require('gulp'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify');
+  uglify = require('gulp-uglify'),
+  parker = require('gulp-parker');
 
 
 // Compile sass to compressed css andd add vendor prefixes
@@ -37,6 +38,13 @@ gulp.task('scripts', function () {
 gulp.task('watch', function() {
   gulp.watch('sass/**/*.scss', ['styles']);
   gulp.watch('js/**/*.js', ['scripts']);
+});
+
+
+// CSS analysis tool
+gulp.task('parker', function() {
+  return gulp.src('./css/style.css')
+    .pipe(parker());
 });
 
 
