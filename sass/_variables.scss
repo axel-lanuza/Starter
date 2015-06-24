@@ -1,6 +1,6 @@
 // Base typography settings
-$fz: 16px;
-$lh: 28px;
+$fz: 15px;
+$lh: 26px;
 $ff: sans-serif;
 
 $h1: 24px;
@@ -14,18 +14,18 @@ $h6: 12px;
 $verticalRythm: true;
 
 // Grid
-$wrapper: 1200px;
+$wrapper: 1152px;
 $gutter: $lh;
 
 // Breakpoints
 $breakpoints: (
   'medium': (min-width: 800px),
   'large': (min-width: 1000px),
-  'max': (min-width: 1200px),
+  'max': (min-width: $wrapper),
   'retina': ((min-resolution: 1.3dppx))
 );
 
 // Colors
 $colorText: #555;
 $colorBg: #fff;
-$color1: #f06;
+$color1: #0074D9;
