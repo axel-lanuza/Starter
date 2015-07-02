@@ -6,11 +6,11 @@
 // use instead of lighten unction
 // http://sass-guidelin.es/#lightening-and-darkening-colors
 @function tint($color, $percentage) {
-  @return mix(white, $color, $percentage);
+  @return mix(#fff, $color, $percentage);
 }
 
 // use instead of darken function
 // http://sass-guidelin.es/#lightening-and-darkening-colors
 @function shade($color, $percentage) {
-  @return mix(black, $color, $percentage);
+  @return mix(#000, $color, $percentage);
 }

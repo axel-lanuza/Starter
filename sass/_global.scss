@@ -1,36 +1,41 @@
 ::selection {
   background: $color1;
-  color: white;
+  color: #fff;
   text-shadow: none;
 }
+
 html {
   box-sizing: border-box;
   height: 100%;
   font-size: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   padding: 0;
   margin: 0;
 }
+
 body {
   height: 100%;
   font-family: $ff;
   font-size: pxtorem($fz);
   line-height: pxtorem($lh);
-  color: $colorText;
-  background: $colorBg;
-  @if $verticalRythm == true {
-    background-image: linear-gradient(rgba(50,50,50,.15) 1px, transparent 1px);
+  color: $color-text;
+  background: $color-bg;
+  @if $vertical-rythm == true {
+    background-image: linear-gradient(rgba(50, 50, 50, .15) 1px, transparent 1px);
     background-size: 100% $lh;
   }
 }
+
 img {
   display: block;
   vertical-align: middle;
@@ -38,8 +43,4 @@ img {
   height: auto;
   border: 0;
   -ms-interpolation-mode: bicubic;
-}
-img[src$=".svg"] {
-  max-width: auto;
-  width: 100%;
 }
