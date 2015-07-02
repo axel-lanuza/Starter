@@ -1,69 +1,90 @@
-b, strong {
-  font-weight: 700
+b,
+strong {
+  font-weight: 700;
 }
-em, i {
+
+em,
+i {
   font-style: italic;
 }
+
 a {
   color: $color1;
   text-decoration: none;
   background: transparent;
   cursor: pointer;
-  &:hover, &:focus, &:active {
+
+  &:hover,
+  &:focus,
+  &:active {
     outline: 0;
     text-decoration: underline;
   }
 }
+
 p {
   margin-bottom: $lh;
 }
-h1, .h1 {
+
+h1 {
   font-size: pxtorem($h1);
   font-weight: 700;
   margin-bottom: $lh;
 }
-h2, .h2 {
+
+h2 {
   font-size: pxtorem($h2);
   font-weight: 700;
   margin-bottom: $lh;
 }
-h3, .h3 {
+
+h3 {
   font-size: pxtorem($h3);
   font-weight: 700;
   margin-bottom: $lh;
 }
-h4, .h4 {
+
+h4 {
   font-size: pxtorem($h4);
   font-weight: 700;
   margin-bottom: $lh;
 }
-h5, .h5 {
+
+h5 {
   font-size: pxtorem($h5);
   font-weight: 700;
   margin-bottom: $lh;
 }
-h6, .h6 {
+
+h6 {
   font-size: pxtorem($h6);
   font-weight: 700;
   margin-bottom: $lh;
 }
-ul, ol {
+
+ul,
+ol {
   margin: 0 0 $lh $lh;
-  ul, ol {
+
+  ul,
+  ol {
     margin: 0 pxtorem($lh);
   }
 }
+
 hr {
   display: block;
   height: $lh;
   border: 0;
-  border-top: 1px solid $colorText;;
+  border-top: 1px solid $color-text;
 }
+
 blockquote {
-  border-left: 4px solid darken($colorBg, 10%);
-  background: darken($colorBg, 5%);
+  border-left: 4px solid darken($color-bg, 10%);
+  background: darken($color-bg, 5%);
   margin-bottom: $lh;
   padding: $lh;
+
   p {
     font-style: italic;
     margin-bottom: 0;

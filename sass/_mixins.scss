@@ -22,7 +22,7 @@
 
 
 @mixin transition($property: all) {
-    transition: $property 150ms ease-out;
+  transition: $property 150ms ease-out;
 }
 
 // how to use:
@@ -30,10 +30,12 @@
 
 
 @mixin clearfix() {
-  &:before, &:after {
+  &:before,
+  &:after {
     content: ' ';
     display: table;
   }
+
   &:after {
     clear: both;
   }
