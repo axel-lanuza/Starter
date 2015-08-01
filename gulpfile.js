@@ -1,3 +1,4 @@
+// Define dependencies
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
@@ -54,7 +55,7 @@ gulp.task('scss-lint', function() {
     .pipe(scsslint());
 });
 
-// Static Server + watching scss, js, html files
+// Static server + watching scss, js, html files
 gulp.task('serve', ['styles', 'scripts'], function() {
   browserSync.init({
     server: '.'
