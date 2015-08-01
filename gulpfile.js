@@ -6,6 +6,7 @@ var uglify = require('gulp-uglify');
 var parker = require('gulp-parker');
 var jscs = require('gulp-jscs');
 var scsslint = require('gulp-scss-lint');
+var browserSync = require('browser-sync').create();
 
 // Compile sass to compressed css andd add vendor prefixes
 gulp.task('styles', function() {
@@ -19,7 +20,8 @@ gulp.task('styles', function() {
     .pipe(autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
     }))
-    .pipe(gulp.dest('./css'));
+    .pipe(gulp.dest('./css'))
+    .pipe(browserSync.stream());
 });
 
 // Concatenate files and minify to output to scripts.min.js
@@ -30,13 +32,8 @@ gulp.task('scripts', function() {
     .on('error', function(error) {
       console.log('- - - ERROR - - - \n' + error.message);
     })
-    .pipe(gulp.dest('./js'));
-});
-
-// Watch sass and js changes
-gulp.task('watch', function() {
-  gulp.watch('sass/**/*.scss', ['styles']);
-  gulp.watch('js/**/*.js', ['scripts']);
+    .pipe(gulp.dest('./js'))
+    .pipe(browserSync.stream());
 });
 
 // CSS analysis tool
@@ -57,5 +54,15 @@ gulp.task('scss-lint', function() {
     .pipe(scsslint());
 });
 
+// Static Server + watching scss, js, html files
+gulp.task('serve', ['styles', 'scripts'], function() {
+  browserSync.init({
+    server: '.'
+  });
+  gulp.watch('sass/**/*.scss', ['styles']);
+  gulp.watch('js/**/*.js', ['scripts']);
+  gulp.watch('./*.html').on('change', browserSync.reload);
+});
+
 // default task
-gulp.task('default', ['watch']);
+gulp.task('default', ['serve']);
