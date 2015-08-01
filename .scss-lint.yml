@@ -34,7 +34,10 @@ linters:
     enabled: true
 
   DeclarationOrder:
-    enabled: true
+    enabled: false
+
+  DisableLinterReason:
+    enabled: false
 
   DuplicateProperty:
     enabled: true
@@ -81,7 +84,7 @@ linters:
 
   Indentation:
     enabled: true
-    allow_non_nested_indentation: false
+    allow_non_nested_indentation: true
     character: space # or 'tab'
     width: 2
 
@@ -95,7 +98,7 @@ linters:
 
   NameFormat:
     enabled: true
-    allow_leading_underscore: true
+    allow_leading_underscore: false
     convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
@@ -146,7 +149,7 @@ linters:
 
   SelectorFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+    convention: strict_BEM # or 'hyphenated_lowercase', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
 
   Shorthand:
     enabled: true
