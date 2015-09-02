@@ -21,9 +21,9 @@
     "gulp-sass": "~2.0.4",
     "gulp-autoprefixer": "2.3.1",
     "gulp-concat": "~2.6.0",
-    "gulp-uglify": "~1.2.0",
+    "gulp-uglify": "~1.4.0",
     "gulp-parker": "~0.1.2",
-    "gulp-scss-lint": "~0.2.2",
+    "gulp-scss-lint": "~0.3.0",
     "gulp-jscs": "~2.0.0",
     "browser-sync": "~2.8.2"
   }
