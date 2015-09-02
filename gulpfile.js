@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var nano = require('gulp-cssnano');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var parker = require('gulp-parker');
@@ -12,15 +13,14 @@ var browserSync = require('browser-sync').create();
 // Compile sass to compressed css andd add vendor prefixes
 gulp.task('styles', function() {
   gulp.src('./sass/style.scss')
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
     .on('error', function(error) {
       console.log('- - - ERROR - - - \n' + error.message);
     })
     .pipe(autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
     }))
+    .pipe(nano())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
