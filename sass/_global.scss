@@ -5,31 +5,31 @@
 }
 
 html {
-  box-sizing: border-box;
   height: 100%;
   font-size: 100%;
-  text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 body {
   height: 100%;
+  background: $color-bg;
+  color: $color-text;
   font-family: $ff;
   font-size: pxtorem($fz);
   line-height: pxtorem($lh);
-  color: $color-text;
-  background: $color-bg;
   @if $vertical-rythm == true {
     background-image: linear-gradient(rgba(50, 50, 50, .15) 1px, transparent 1px);
     background-size: 100% $lh;
@@ -38,9 +38,9 @@ body {
 
 img {
   display: block;
-  vertical-align: middle;
   max-width: 100%;
   height: auto;
   border: 0;
+  vertical-align: middle;
   -ms-interpolation-mode: bicubic;
 }
