@@ -1,0 +1,411 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sty",
+				"style.scss"
+			],
+			[
+				"s",
+				"src	Attr"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 209.0,
+		"last_filter": "syn js",
+		"selected_items":
+		[
+			[
+				"syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sass loo",
+				"Snippet: sass - loop through map"
+			],
+			[
+				"syn sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"syn s",
+				"Set Syntax: Sass"
+			],
+			[
+				"syn ht",
+				"Set Syntax: HTML"
+			],
+			[
+				" syn js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn htm",
+				"Set Syntax: HTML"
+			],
+			[
+				"syn css",
+				"Set Syntax: CSS"
+			],
+			[
+				"js se",
+				"Snippet: js - jquery - selector"
+			],
+			[
+				"jq",
+				"Snippet: js - jquery - selector"
+			],
+			[
+				"jqu",
+				"Snippet: js - jquery - selector"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript (Rails)"
+			],
+			[
+				"php acf",
+				"Snippet: php - wp - acf - repeater"
+			],
+			[
+				"php wp acf",
+				"Snippet: php - wp - acf - flexible content"
+			],
+			[
+				"syn php",
+				"Set Syntax: PHP"
+			],
+			[
+				"jek",
+				"Snippet: jekyll - code"
+			],
+			[
+				"jek cod",
+				"Snippet: jekyll - code"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"syn mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insll",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 529.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/pawelgrzybek/Documents/Projects/Starter"
+	],
+	"file_history":
+	[
+		"/Users/pawelgrzybek/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/pawelgrzybek/Desktop/js.js",
+		"/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/Headers/Conversion.h",
+		"/Users/pawelgrzybek/.bash_profile",
+		"/Users/pawelgrzybek/Desktop/style.scss.haml",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/sass/sass - loop through map.sublime-snippet",
+		"/Users/pawelgrzybek/Desktop/Starter/sass/_global.scss",
+		"/Users/pawelgrzybek/Desktop/script.js",
+		"/Users/pawelgrzybek/Desktop/Starter/index.html",
+		"/Users/pawelgrzybek/Desktop/Starter/sass/_grid.scss",
+		"/Users/pawelgrzybek/Desktop/Starter/gulpfile.js",
+		"/Users/pawelgrzybek/Desktop/Starter/sass/_modules.scss",
+		"/Users/pawelgrzybek/Desktop/Starter/js/script1.js",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/sass/mq.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/sass/forloop.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/other/other-schema-address.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/other/other-lorempixel.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-modernizr-svgfallback.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-modernizr-placeholderfallback.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-jquery-selector.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-jquery-sameheight.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-jquery-masonry.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/js/js-ga-addevent.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/jekyll/jekyll-top.sublime-snippet",
+		"/Users/pawelgrzybek/Dropbox/Sublime/User/snippets/jekyll/jekyll-code.sublime-snippet",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/gulpfile.js",
+		"/Users/pawelgrzybek/Desktop/Starter/readme.md",
+		"/Users/pawelgrzybek/Dropbox/Gulp presentation/project/style.scss",
+		"/Users/pawelgrzybek/Desktop/style.scss",
+		"/Users/pawelgrzybek/Desktop/projectfinal/style.scss",
+		"/Users/pawelgrzybek/Desktop/project/package.json",
+		"/Users/pawelgrzybek/Desktop/project/gulpfile.js",
+		"/Users/pawelgrzybek/Desktop/project/style.css",
+		"/Users/pawelgrzybek/Desktop/super extra cool project/style.css",
+		"/Users/pawelgrzybek/Desktop/super extra cool project/script.js",
+		"/Users/pawelgrzybek/Desktop/super extra cool project/index.html",
+		"/Users/pawelgrzybek/.ssh/id_rsa.pub",
+		"/Users/pawelgrzybek/Desktop/test/package.json",
+		"/Users/pawelgrzybek/Desktop/jekyll/site/_docs/sites.md",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_posts/2015-03-26-my-web-development-setup.md",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_sass/_fonts.scss",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_sass/_variables.scss",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_sass/_global.scss",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/.gitignore",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_sass/_grid.scss",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_includes/head.html",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/.git/config",
+		"/Users/pawelgrzybek/Downloads/webfontkit-20150327-025229/stylesheet.css",
+		"/Users/pawelgrzybek/Desktop/studiorgb.github.io/_sass/_typography.scss"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 121.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"7px",
+			"$color",
+			"$profile",
+			"obstacle",
+			"bonus",
+			"multiplier",
+			"uglify",
+			"http://tom.preston-werner.com/"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 115.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/User/JavaScript.sublime-build",
+	"project": "Starter.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"ind",
+				"index.html"
+			],
+			[
+				"mod",
+				"sass/_modules.scss"
+			],
+			[
+				"gri",
+				"sass/_grid.scss"
+			],
+			[
+				"glob",
+				"sass/_global.scss"
+			],
+			[
+				"ream",
+				"readme.md"
+			],
+			[
+				"var",
+				"_sass/_variables.scss"
+			],
+			[
+				"globa",
+				"_sass/_global.scss"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"inde",
+				"index.html"
+			],
+			[
+				"gu",
+				"gulpfile.js"
+			],
+			[
+				"sty",
+				"style.scss"
+			],
+			[
+				"gup",
+				"gulpfile.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"sites",
+				"site/_docs/sites.md"
+			],
+			[
+				"fon",
+				"_sass/_fonts.scss"
+			],
+			[
+				"head",
+				"_includes/head.html"
+			],
+			[
+				"glo",
+				"_sass/_global.scss"
+			],
+			[
+				"ty",
+				"_sass/_typography.scss"
+			],
+			[
+				"typo",
+				"_sass/_typography.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
