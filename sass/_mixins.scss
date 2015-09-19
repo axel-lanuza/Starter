@@ -9,15 +9,27 @@
     }
   }
   @else {
-    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+    @if type-of($breakpoint) == number {
+      @media  (min-width: ($breakpoint * 1px)){
+        @content;
+      }
+    }
+    @else {
+      @error 'Value `#{$breakpoint}` needs to be in $breakpoints map. If you would like to use and exception, pass a number value.';
+    }
   }
 }
 
 // how to use:
 // body {
 //   font-size: 16px;
+
 //   @include mq(large) {
 //     font-size: 18px;
+//   }
+
+//   @include mq(960) {
+//     font-size: 22px;
 //   }
 // }
 
