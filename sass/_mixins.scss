@@ -44,3 +44,21 @@
 
 // how to use:
 // @include clearfix;
+
+@mixin nthoftype($nth) {
+  &:first-of-type:nth-last-of-type(n + #{$nth}),
+  &:first-of-type:nth-last-of-type(n + #{$nth}) ~ & {
+    @content;
+  }
+}
+
+// how to use:
+// @include nthoftype(3) {
+//   width: 100% / 3;
+// }
+// or with loop
+// @for $i from 2 through 6 {
+//   @include nthoftype(#{$i}) {
+//     width: 100% / $i;
+//   }
+// }
