@@ -13,7 +13,7 @@ gulp.task('styles', function() {
   gulp.src('./sass/style.scss')
     .pipe(sass())
     .on('error', function(error) {
-      console.log('- - - ERROR - - - \n' + error.message);
+      console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
     .pipe(autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
@@ -29,7 +29,7 @@ gulp.task('scripts', function() {
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .on('error', function(error) {
-      console.log('- - - ERROR - - - \n' + error.message);
+      console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
     .pipe(gulp.dest('./js'))
     .pipe(browserSync.stream());
