@@ -10,7 +10,7 @@ var browserSync = require('browser-sync').create();
 
 // Compile sass to compressed css andd add vendor prefixes
 gulp.task('styles', function() {
-  gulp.src('./sass/style.scss')
+  gulp.src('./src/sass/style.scss')
     .pipe(sass())
     .on('error', function(error) {
       console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
@@ -25,7 +25,10 @@ gulp.task('styles', function() {
 
 // Concatenate files and minify to output to scripts.min.js
 gulp.task('scripts', function() {
-  gulp.src(['./js/script1.js', './js/script2.js'])
+  gulp.src([
+    './src/js/script1.js',
+    './src/js/script2.js'
+  ])
     .pipe(concat('scripts.min.js'))
     .pipe(uglify())
     .on('error', function(error) {
@@ -46,8 +49,8 @@ gulp.task('serve', ['styles', 'scripts'], function() {
   browserSync.init({
     server: '.'
   });
-  gulp.watch('sass/**/*.scss', ['styles']);
-  gulp.watch('js/**/*.js', ['scripts']);
+  gulp.watch('src/sass/**/*.scss', ['styles']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
