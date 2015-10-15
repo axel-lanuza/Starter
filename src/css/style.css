@@ -1,5 +1,6 @@
-@charset 'UTF-8';
+@import '_variables.css';
 
 body {
-  background: blue;
+  color: $color-brand;
+  font-size: $font-size;
 }
