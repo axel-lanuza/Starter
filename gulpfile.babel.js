@@ -1,16 +1,17 @@
 // Define dependencies
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var nano = require('gulp-cssnano');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var parker = require('gulp-parker');
-var browserSync = require('browser-sync').create();
+import gulp from 'gulp';
+import sass from 'gulp-sass';
+import autoprefixer from 'gulp-autoprefixer';
+import nano from 'gulp-cssnano';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import parker from 'gulp-parker';
+import browserSync from 'browser-sync';
+
 
 // Compile sass to compressed css andd add vendor prefixes
-gulp.task('styles', function() {
-  gulp.src('./src/sass/style.scss')
+gulp.task('styles', () => {
+  return gulp.src('./src/sass/style.scss')
     .pipe(sass())
     .on('error', function(error) {
       console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
@@ -23,9 +24,10 @@ gulp.task('styles', function() {
     .pipe(browserSync.stream());
 });
 
+
 // Concatenate files and minify to output to scripts.min.js
-gulp.task('scripts', function() {
-  gulp.src([
+gulp.task('scripts', () => {
+  return gulp.src([
     './src/js/script1.js',
     './src/js/script2.js'
   ])
@@ -38,14 +40,16 @@ gulp.task('scripts', function() {
     .pipe(browserSync.stream());
 });
 
+
 // CSS analysis tool
-gulp.task('parker', function() {
+gulp.task('parker', () => {
   return gulp.src('./css/style.css')
     .pipe(parker());
 });
 
+
 // Static server + watching scss, js, html files
-gulp.task('serve', ['styles', 'scripts'], function() {
+gulp.task('serve', ['styles', 'scripts'], () => {
   browserSync.init({
     server: '.'
   });
@@ -53,6 +57,7 @@ gulp.task('serve', ['styles', 'scripts'], function() {
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
+
 
 // default task
 gulp.task('default', ['serve']);
