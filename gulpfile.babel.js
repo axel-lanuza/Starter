@@ -1,30 +1,30 @@
 // Define dependencies
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var nano = require('gulp-cssnano');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var parker = require('gulp-parker');
-var browserSync = require('browser-sync').create();
+import gulp from 'gulp';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import browserSync from 'browser-sync';
 
-// Compile sass to compressed css andd add vendor prefixes
-gulp.task('styles', function() {
-  gulp.src('./src/sass/style.scss')
-    .pipe(sass())
+
+// Compile postCSS
+gulp.task('styles', () => {
+  var processors = [
+    autoprefixer
+  ];
+
+  return gulp.src('./src/css/style.css')
+    .pipe(postcss(processors))
     .on('error', function(error) {
       console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
-    .pipe(autoprefixer({
-      browsers: ['> 1%', 'last 2 versions', 'Firefox >= 20']
-    }))
-    .pipe(nano())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 });
 
+
 // Concatenate files and minify to output to scripts.min.js
-gulp.task('scripts', function() {
+gulp.task('scripts', () => {
   gulp.src([
     './src/js/script1.js',
     './src/js/script2.js'
@@ -38,21 +38,17 @@ gulp.task('scripts', function() {
     .pipe(browserSync.stream());
 });
 
-// CSS analysis tool
-gulp.task('parker', function() {
-  return gulp.src('./css/style.css')
-    .pipe(parker());
-});
 
 // Static server + watching scss, js, html files
-gulp.task('serve', ['styles', 'scripts'], function() {
+gulp.task('serve', ['styles', 'scripts'], () => {
   browserSync.init({
     server: '.'
   });
-  gulp.watch('src/sass/**/*.scss', ['styles']);
+  gulp.watch('src/css/**/*.css', ['styles']);
   gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
+
 
 // default task
 gulp.task('default', ['serve']);
