@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/studiorgb/Starter"
+    "url": "https://github.com/pawelgrzybek/Starter"
   },
-  "homepage": "http://studiorgb.uk",
+  "homepage": "https://pawelgrzybek.com",
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-core": "^5.8.25",

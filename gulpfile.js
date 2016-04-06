@@ -1,13 +1,13 @@
 // Define dependencies
-import gulp from 'gulp';
-import postcss from 'gulp-postcss';
-import autoprefixer from 'autoprefixer';
-import atImport from 'postcss-import';
-import vars from 'postcss-simple-vars';
-import cssnano from 'gulp-cssnano';
-import concat from 'gulp-concat';
-import uglify from 'gulp-uglify';
-import browserSync from 'browser-sync';
+const gulp = require('gulp');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const atImport = require('postcss-import');
+const vars = require('postcss-simple-vars');
+const cssnano = require('gulp-cssnano');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const browserSync = require('browser-sync');
 
 
 // Compile postCSS
