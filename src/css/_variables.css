@@ -1,9 +1,6 @@
-$color-brand: hotpink;
-$font-size: em;
-
-/*// Base typography settings
-$fz: 15px;
-$lh: 26px;
+/* Base typography settings */
+$fz: 18px;
+$lh: 30px;
 $ff: sans-serif;
 
 $h1: 24px;
@@ -13,14 +10,14 @@ $h4: 16px;
 $h5: 14px;
 $h6: 12px;
 
-// Show vertical rythm
+/* Show vertical rythm */
 $vertical-rythm: true;
 
-// Grid
+/* Grid */
 $wrapper: 1152px;
 $gutter: $lh;
 
-// Breakpoints
+/* Breakpoints */
 $breakpoints: (
   'medium': (min-width: 800px),
   'large': (min-width: 1000px),
@@ -28,7 +25,7 @@ $breakpoints: (
   'retina': ((min-resolution: 1.3dppx))
 );
 
-// Colors
+/* Colors */
 $color-text: #555;
 $color-bg: #fff;
-$color1: #0074d9;*/
+$color1: #0074d9;

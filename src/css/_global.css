@@ -28,12 +28,11 @@ body {
   background: $color-bg;
   color: $color-text;
   font-family: $ff;
-  font-size: pxtorem($fz);
-  line-height: pxtorem($lh);
-  @if $vertical-rythm == true {
-    background-image: linear-gradient(rgba(50, 50, 50, .15) 1px, transparent 1px);
-    background-size: 100% $lh;
-  }
+  font-size: $fz;
+  line-height: $lh;
+
+  background-image: linear-gradient(rgba(50, 50, 50, .15) 1px, transparent 1px);
+  background-size: 100% $lh;
 }
 
 img {

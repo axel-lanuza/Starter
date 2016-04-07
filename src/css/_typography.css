@@ -27,37 +27,37 @@ p {
 }
 
 h1 {
-  font-size: pxtorem($h1);
+  font-size: $h1;
   font-weight: 700;
   margin-bottom: $lh;
 }
 
 h2 {
-  font-size: pxtorem($h2);
+  font-size: $h2;
   font-weight: 700;
   margin-bottom: $lh;
 }
 
 h3 {
-  font-size: pxtorem($h3);
+  font-size: $h3;
   font-weight: 700;
   margin-bottom: $lh;
 }
 
 h4 {
-  font-size: pxtorem($h4);
+  font-size: $h4;
   font-weight: 700;
   margin-bottom: $lh;
 }
 
 h5 {
-  font-size: pxtorem($h5);
+  font-size: $h5;
   font-weight: 700;
   margin-bottom: $lh;
 }
 
 h6 {
-  font-size: pxtorem($h6);
+  font-size: $h6;
   font-weight: 700;
   margin-bottom: $lh;
 }
@@ -68,7 +68,7 @@ ol {
 
   ul,
   ol {
-    margin: 0 pxtorem($lh);
+    margin: 0 $lh;
   }
 }
 

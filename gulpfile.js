@@ -5,7 +5,6 @@ const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
 const vars = require('postcss-simple-vars');
 const cssnano = require('gulp-cssnano');
-const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync');
 
@@ -24,23 +23,19 @@ gulp.task('styles', () => {
       console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
     .pipe(cssnano())
-    .pipe(gulp.dest('./css'))
+    .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
 });
 
 
 // Concatenate files and minify to output to scripts.min.js
 gulp.task('scripts', () => {
-  gulp.src([
-    './src/js/script1.js',
-    './src/js/script2.js'
-  ])
-    .pipe(concat('scripts.min.js'))
+  gulp.src('./src/js/app.js')
     .pipe(uglify())
     .on('error', function(error) {
       console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
     })
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 });
 
@@ -51,7 +46,7 @@ gulp.task('serve', ['styles', 'scripts'], () => {
     server: '.'
   });
   gulp.watch('src/css/**/*.css', ['styles']);
-  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('src/js/*.js', ['scripts']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
