@@ -1,3 +1,5 @@
+'use strict';
+
 // Define dependencies
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
@@ -5,7 +7,10 @@ const autoprefixer = require('autoprefixer');
 const atImport = require('postcss-import');
 const vars = require('postcss-simple-vars');
 const cssnano = require('gulp-cssnano');
-const uglify = require('gulp-uglify');
+const util = require('gulp-util');
+const source = require('vinyl-source-stream');
+const browserify = require('browserify');
+const babel = require('babelify');
 const browserSync = require('browser-sync');
 
 
@@ -28,13 +33,17 @@ gulp.task('styles', () => {
 });
 
 
-// Concatenate files and minify to output to scripts.min.js
-gulp.task('scripts', () => {
-  gulp.src('./src/js/app.js')
-    .pipe(uglify())
-    .on('error', function(error) {
-      console.log('\n ✖ ✖ ✖ ✖ ✖ ERROR ✖ ✖ ✖ ✖ ✖ \n \n' + error.message + '\n \n');
+// scripts task
+gulp.task('scripts', function() {
+  browserify('./src/js/app.js')
+    .transform(babel, {
+      presets: ['es2015']
     })
+    .bundle()
+    .on('error', function(e) {
+      util.log(e);
+    })
+    .pipe(source('bundle.js'))
     .pipe(gulp.dest('./dist/js'))
     .pipe(browserSync.stream());
 });
